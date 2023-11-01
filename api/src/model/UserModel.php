@@ -15,6 +15,13 @@ Class UserModel {
         return $sql;
     }
 
+    function listar(){
+        $connection = new Connection();
+        $sql = $connection->connect()->query("SELECT * FROM users");
+        $sql = $sql ->fetchAll(PDO::FETCH_ASSOC);
+        return $sql;
+    }
+
 
 }
 
