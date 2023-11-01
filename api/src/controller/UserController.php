@@ -29,6 +29,11 @@ Class UserController {
             return $data;
         }
     }
+    function listar(){
+        $lista = new UserModel();
+        $result = $lista ->listar();
+        return (json_encode($result));
+    }
 
 }
 
